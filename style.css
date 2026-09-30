@@ -1,0 +1,221 @@
+/* ---------- Colors and fonts (change these to restyle the whole site) ---------- */
+:root {
+  --bg: #f3f6ee;          /* pale sage background */
+  --sage: #8aa686;        /* main sage green */
+  --sage-deep: #3f5843;   /* dark sage for headings and buttons */
+  --sage-soft: #dfe8d8;   /* light sage for chips and cards */
+  --butter: #f4e6b0;      /* small warm accent */
+  --text: #2b352d;        /* body text */
+
+  --heading-font: "Fraunces", Georgia, serif;
+  --body-font: "Nunito Sans", Arial, sans-serif;
+}
+
+/* ---------- Basics ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+main,
+.site-header,
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+a {
+  color: var(--sage-deep);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--sage-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--sage);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+/* ---------- Headings ---------- */
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--sage-deep);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin: 0 0 12px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 56px 0 64px;
+  border-bottom: 4px solid var(--sage);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  max-width: 34em;
+  margin: 0 0 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: var(--sage-deep);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.button:hover {
+  background-color: var(--sage);
+  color: var(--text);
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 48px 0 8px;
+  max-width: 40em;
+}
+
+.hero {
+  max-width: none;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background-color: var(--sage-soft);
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.skills li:first-child {
+  background-color: var(--butter);
+}
+
+/* ---------- Projects (used later) ---------- */
+.project {
+  background-color: var(--sage-soft);
+  border-left: 6px solid var(--sage);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+
+.project h3 {
+  margin: 0 0 6px;
+}
+
+.project p {
+  margin: 0 0 8px;
+}
+
+.project .tech {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ---------- Contact ---------- */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin-bottom: 6px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  font-size: 0.95rem;
+  color: var(--sage-deep);
+}
+
+footer p {
+  border-top: 2px solid var(--sage-soft);
+  padding-top: 16px;
+  margin: 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+  body {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 32px 0 48px;
+  }
+}
